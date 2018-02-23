@@ -1,6 +1,6 @@
 **Title:** Bayesian and likelihood phylogenetic placement of fossil taxa from quantitative morphometric data
 **Authors:** Caroline Parins-Fukuchi
-**Journal:** Evolution?
+**Journal:** PLoS Comp bio? Evolution?
 **Abstract:** Stuff and things
 
 **Introduction:** The role of fossil data in reconstructing phylogeny among living organisms has long been a central, yet contentious, topic in evolutionary biology. One view has historically suggested that imperfections in the preservation and identification of fossils should preclude their inclusion in phylogenetic inference, instead suggesting that fossils be placed into the stem lineages of trees representing extant species (Hennig 1965). Other researchers have argued that fossil information is fundamentally important when inferring evolutionary dynamics and relationships (Donoghue et al. 1989). Since this time, there has been significant interest in the simultaneous reconstruction of fossil and living organisms in a ‘total evidence’ framework. Approaches based upon probabilistic models of molecular and morphological character that incorporate fossil taxa into the reconstruction of phylogenetic relationships and divergence times have increased understanding of evolutionary patterns across large clades, and provide compelling evidence in favor of incorporating fossils in phylogenetic analyses (Pyron et al. 2011, Ronquist et al. 2012, Zhang et al. 2015). 
@@ -105,17 +105,18 @@ All analyses of fossil placements and branch lengths were performed using the ne
 
 *Simulations*
 
-Reconstructions of fossil placements from the simulated datasets showed that the method is generally accurate in placing fossil taxa (Table 1). In the absence of noisy traits, reconstruction is nearly always correct, with the reconstructed position of each fossil placed less than 0.1 nodes away from the true position on average. In the presence of random noise, the reconstructions are fairly accurate, except when noise becomes severe. Nevertheless, even in extreme cases, estimated positions tend to fall within the correct region of the tree, landing 1.85 and ~3 nodes away from the correct placement on average when alignments contain an equal number of clean and dirty sites. 
+Reconstructions of fossil placements from the simulated datasets showed that the method is generally accurate in placing fossil taxa (Table 1). In the absence of noisy traits, reconstruction is nearly always correct, with the reconstructed position of each fossil placed less than 0.1 nodes away from the true position on average. In the presence of random noise, the reconstructions are fairly accurate, except when noise becomes severe. Nevertheless, even in extreme cases, estimated positions tend to fall within the correct region of the tree, falling 1.85 and ~3 nodes away from the correct placement on average when alignments contain an equal number of clean and dirty sites. 
 
 Overall, binary weighting shows  improved accuracy over float and unweighted analyses. However, despite the apparent advantage of binary weighting, it is possible that the float weighting scheme could remain beneficial in cases where the distribution of noise varies betwen different regions of trees. This is because the float weighting scheme limits the contribution of noisy sites to the likelihood rather than entirely excluding them. This possibility was not examined in this set of simulations, since the dirty traits were generated to reflect completely random noise. However, in reality, noise may be structured to display . In these cases, continuous traits may display misleading signal among some subset of taxa, but correctly informative signal among other subsets. Further work will be needed to determine whether absolute float weight values scale predictably with the noisiness of particular sites across clades.
 
+Overall, the simulations demonstrate the efficacy of the present method for  the phylogenetic placement of fossils and provide a validation of the computational implementation. The analysis of clean datasets shows that the method performs well, estimating fossil placments with very low error when signal is clear. The adaptation of Berger and Stamatakis' (2010) site weight calibration approach also appears to effectively filter through noisy datasets to improve estimation. The binary weight calibrations appear particularly effective at dealing with rampant misleading random noise, with improving accuracy by 2 to 20 times depending on the relative proportion of signal and noise compared to unweighted analyses. These results show promise toward the prospect of applying the method developed in this work to the analysis of large-scale morphometric datasets, where significant noise might be expected. Although introducing noise to unweighted analyses decreases reconstruction accuracy, the method performs predictably, and still manages to place fossils on average within the correct neighborhood. However, when weighting schemes are applied, the performance improves drastically, highlighting the promise of this method for the analysis of empirical datasets.
 
-| dataset | binary_weights | float_weights |
-| ------ | ----------- |------------------------------|
-| 50 clean  |  0.065 | 0.065|
-| 50 clean + 10 dirty| 0.156| 1.234|
-| 50 clean + 25 dirty| 0.965 |2.623|
-| 50 clean + 50 dirty|  1.85 |3.069|
+| dataset | binary_weights | float_weights |unweighted|
+| ------ | ----------- |------------------------------|----------|
+| 50 clean  |  0.065 | 0.067|0.065|
+| 50 clean + 10 dirty| 0.156| 1.234|2.516|
+| 50 clean + 25 dirty| 0.965 |2.623|3.105|
+| 50 clean + 50 dirty|  1.85 |3.069|RUNNING|
 
 **Table 1.** Mean distances of true and reconstructed fossil placements. Distances are measured as the average number of nodes separating reconstructed placements from their true positions across all 100 replicates of each dataset.
 
@@ -123,6 +124,10 @@ Overall, binary weighting shows  improved accuracy over float and unweighted ana
 *Vitaceae dataset:*
 
 Application of the fossil placement method to the Vitaceae dataset showed generally positive results. The weight calibration procedure revealed substantial noise in the dataset, with 10-12 of 51 sites failing to favor the molecular reference tree over the random trees at least 95% of the time across all runs. Despite this noise, the binary weighting scheme appeared to adequately filter through this noise to generate biologically reasonable results. *Vitis tiffneyi*, *Parthenocissus_clarnensis* , and *Ampelopsis rooseae* all share clades with the extant members of their respective genera. *Palaeovitis_paradoxa*, and *Cissocarpus jackesiae*, which represent genera with no extant species, both group confidently with separate, non-monophyletic groups of crown *Cissus*.  *Ampelocissus wildei* is placed convidently along with crown *Cissus*, separated by only anode from *Palaeovitis paradoxa*. All six of these taxa are stable in their placements, grouping within the same clades across runs, and when both the exponential and empirical compound dirichlet priors are applied. 
+
+![](/home/tomo/projects/fossil_placement/vitfig.svg) 
+
+*Figure 1.* Vitaceae fossil placements. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement.
 
 The remaining two fossils are substantially less stable in their placements. *Ampelocissus parvisemina* shows erratic placement, alternately occupying clades shared by crown *Vitis* or *Nekemias* in the best exponential and dirichlet prior runs, respectively. Its placement also changes across different runs using the same prior, and shows poor support in all cases. Under the exponential prior, the *Ampelocissus parvisemina* placement shows a 0.2 posterior probability, which decreases to 0.058 under the dirichlet prior.  Similarly, *Vitis magnisperma* alternately resolves into clades shared by crown *Cissus* and *Ampelocissus* under the exponential and dirichlet priors, with posterior support values of 0.23 and 0.54, respectively.
 
@@ -132,9 +137,11 @@ Despite the potential frustration caused by the erraticism of the last two taxa,
 
 Analysis of the carnivoran dataset also yielded generally reasonable results. The placements of *Piscophoca pacifica*, *Acrophoca longirostris*, *Enaliarctos emlongii*, and *Allodesmus* agree with previous results (Amson and Muison 2013, Jones et al. 2015). The placement of *Piscophoca pacifica* and *Acrophoca longirostris* differs slightly from the topology used by Jones et al., placing the two taxa in a more nested position. However, this placement is consistent with the results of Amson and Muison.  *Enaliarctos emlongii* and *Allodesmus* resolve in positions identical to the topology used by Jones and colleagues. *Pontolis magnus* is more erratic in its placement, alternating between placement at the center of the unrooted topology, or grouping erroneously with *Vulpes* and *Otocyon*. Nevertheless, like the problem taxa in the Vitaceae example above, the placement of *Pontolis* displays reassuringly weak support, both in terms of its posterior density and in its tendency to group at the center of the tree. Interestingly, although the placements of *Enaliarctos emlongii* and *Allodesmus* remain stable across runs, both display weak support.
 
+In both datasets, the method provides conservative 
+
 *Conclusions:*
 
-The methods described here provide new means for biologists to reliably and confidently place fossils in the tree of life. Although the simulated and empirical analyses suggest imperfections and a need for further refinement of these methods,  the overall accuracy and conservative assessment of uncertainty displayed in the examples appear encouraging. WHAT ELSE HERE
+The methods described here provide new means for biologists to reliably and confidently place fossils in the tree of life. Although the simulated and empirical analyses show several imperfections and a need for further refinement of these methods,  the overall accuracy and conservative assessment of uncertainty displayed in the examples appear encouraging. WHAT ELSE HERE
 
 **References:**
 
