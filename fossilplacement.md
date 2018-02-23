@@ -17,7 +17,7 @@ For all of these reasons, continuous traits have been suggested as a feasible al
 
 Traditional linear morphometric measurements have long been employed in morphological phylogenetics, but are typically discretized to more easily analyze them alongside present-absence data. However, these transformations may decrease the amount of information in continuous datasets by binning fine-scaled variation into shared discrete categories, and are susceptible to the difficulties in modelling under the Mk model described above. Geometric morphometric data have shown utility in several previous phylogenetic studies using parsimony-based methods (González-José et al. 2008, Catalano and Goloboff 2010, Smith and Hendricks 2013), however, they have not gained substantial traction. This may be in part due to the lack of available tools to analyze continuous trait data in a probabilistic framework. 
 
-The earliest studies investigating probabilistic methods of phylogenetic inference were developed using continuous characters modelled under Brownian Motion (BM) (Cavalli-Sforza and Edwards 1967, Felsenstein 1973). Due in part to the abundant discrete character data that became available with the emergence of DNA sequencing, these approaches were quickly overshadowed in popularity by discrete trait approaches based upon Markov nucleotide substitution models. Continuous trait models have since gained significant popularity in phylogenetic comparative methods, but still are rarely used for phylogenetic inference. As a result, few implementations exist, with only ContML in the PHYLIP package and RevBayes providing such functionality (cite phylip and revbayes). The approaches used in these packages are also fairly minimalistic, with no real tailoring to the challenges that might be presented by empirical datasets. 
+The earliest studies investigating probabilistic methods of phylogenetic inference were developed using continuous characters modelled under Brownian Motion (BM) (Cavalli-Sforza and Edwards 1967, Felsenstein 1973). Due in part to the abundant discrete character data that became available with the emergence of DNA sequencing, these approaches were quickly overshadowed in popularity by discrete trait approaches based upon Markov nucleotide substitution models. Continuous trait models have since gained significant popularity in phylogenetic comparative methods, but still are rarely used for phylogenetic inference. As a result, few implementations exist, with only ContML in the PHYLIP package and RevBayes providing such functionality (Hohna et al. 2016). The approaches used in these packages are also fairly minimalistic, with no real tailoring to the challenges that might be presented by empirical datasets. 
 
 In this paper, I describe a new set of approaches that place fossils on molecular trees using quantitative characters modelled under BM. These methods seek to tackle some of the most pressing obstacles associated with the use of traditional and geometric morphometric data in phylogenetic inference. Using simulated data, I validate and explore the behavior of the implementation. I also analyze empirical datasets representing the Vitaceae family of flowering plants and carnivoran mammals (Jones et al. 2015) comprised of traditional and geometric morphometric measurements, respectively. These methods use Markov Chain Monte Carlo (MCMC) to infer the evolutionary placements of fossils and branch lengths. Although MCMC is generally associted with Bayesian inference, my implementation can perform inference both with and without the use of priors. It is thus philosophically agnostic, and offers exploration of a diverse range of options to best accommodate diverse morphometric datasets. These approaches are implemeted in the *cophymaru* package.
 
@@ -27,15 +27,17 @@ In this paper, I describe a new set of approaches that place fossils on molecula
 
 The approaches that I describe in this paper all rely upon the familiar BM model of evolution. Under BM, traits are assumed to be multivariate distributed, with variances between taxa defined by the product of their evolutionary distance measured in absolute time and the instantaneous rate parameter (&sigma;<sup>2</sup>):
 
-$$ dX(t) = \sigma dB(t); $$  (Eqn. 1)
+$$ dX(t) = \sigma dB(t); (Eqn. 1) $$ 
 
 where *dX(t)* is the time derivative of the change in trait *X* and *dB(t)* corresponding to normally distributed random variables with mean 0 and variance *dt*. This leads to the expectation that over time _t_,
 
-$Expect(X<sub>t</sub>) = X<sub>0</sub> $, Eqn. 2
+$$ E(X_t) = X_0;   (Eqn. 2) $$ 
 
 with
 
-$Var(X<sub>t</sub>) =  $sigma;*t*. $ Eqn. 3
+$$Var(X_t) =  \sigma t,  (Eqn. 3)$$
+
+where X<sub>0</sub> gives the trait value at t<sub>0</sub>.
 
 The methods that I describe use a slightly different parameterization and likelihood calculation than most conventional implementations used in modern phylogenetic comparative methods (PCMs). These generally construct a variance-covariance (VCV) matrix from a dated, ultrametric phylogeny to calculate the likelihood of the data, assuming a multivariate normal distribution (see Felsenstein 1973 or O'Meara 2004 for a detailed explanation). Since these methods treat the topology and branching times as known, the goal is typically to obtain the maximum likelihood estimate (MLE) of the rate parameter (&sigma;<sup>2</sup>) to examine evolutionary rate across clades. 
 
@@ -63,17 +65,44 @@ Since the estimation of branch lengths from continuous traits is relatively unch
 
 To generate an initial estimate of fossil placements and branch lengths, I estimate an approximate ML starting tree. Initial placements are achieved using stepwise addition. Each fossil is individually inserted along all existing branches of the tree, with the insertion point that yields the highest likelihood retained. At each step, MLEs of the branch lengths are computed using the iterative procedure introduced by Felsensten (1981). In this procedure, the tree is rerooted along each node. PICs are calculated to each of the three edges subtending the new root, and then the MLE of each edge (*v*<sub>i</sub>) is computed analytically by averaging the distances between the PICs calculated from each site in the alignment (*x*<sub>ij</sub>):
 
-$$ hat{v_1} =   (x_1- x_2) (x_1 - x_3) $$
+$$ \hat{v_1} =   (x_1- x_2) (x_1 - x_3) (Eqn. 4)$$
 
-$$ hat{v_2} =   (x_2- x_1) (x_2 - x_3) $$
+$$ \hat{v_2} =   (x_2- x_1) (x_2 - x_3) (Eqn. 5) $$
 
-$$ hat{v_1} =   (x_3- x_1) (x_3 - x_2) $$
+$$ \hat{v_3} =   (x_3- x_1) (x_3 - x_2) (Eqn. 6) $$
 
 This process is iterated until the branch lengths and likelihoods converge. Once the optimal placement of all of the fossils has been identified, the branch lengths are recalulated and can be used to inform branch length priors used during MCMC simulation. One problem with intepreting the results of this approach on their own is that it has a strong propensity to becoming trapped in local optima. As a result, it should be interpreted and deployed cautiously in especially messy datasets. In the applications here, the topologies acheived from this procedure are restricted to the construction of starting trees, while the branch lengths inform the specification of branch length priors. This procedure allows straightforward construction of non-random starting trees for the MCMC and priors that reflect the scale of the dataset under analysis. 
 
 *Filtering for concordant sites:*
 
-One major hurdle involved in the use of morphological data is their frequent tendency to display noisy and discordant signal. This problem might be expected to manifest even more intrusively in morphometric datasets than in discrete datasets, since traits are much less likely to be excluded *a priori* on the basis of perceived unreliability. As a result, there is a need to filter through noisy signal to favor more reliable sites. I developed a procedure adapted from Berger and Stamatakis (2010) for this purpose. This computes a set of weights based upon the concordance of each site with the reference tree. In this procedure, the likelihood of each site is calculated on the reference tree (excluding fossil taxa). Next, the likelihood of each site is calculated along 100 randomly generated phylogenies. If the likelihood of the site is higher along the reference tree than the current random tree, the weight of the site is incremented by one. This yields a weight vector that is the same length as the character matrix, with each site possessing a weight between 0 and 100. The sites are then weighted using one of three schemes: 1) whole integer values, where the weight is retained as a whole number between 0 and 100, 2) a floating point value between 0 and 1, where the value generated from the random comparison is divided by 100, and 3) a binary value where the weight is equal to 1 if the site displayed a higher likelihood in the reference tree than 95 or more of the random trees, and 0 if less than 95. 
+One major hurdle involved in the use of morphological data is their frequent tendency to display noisy and discordant signal. This problem might be expected to manifest even more intrusively in morphometric datasets than in discrete datasets, since traits are much less likely to be excluded *a priori* on the basis of perceived unreliability. As a result, there is a need to filter through noisy signal to favor more reliable sites. I developed a procedure adapted from Berger and Stamatakis (2010) for this purpose. This computes a set of weights based upon the concordance of each site with the reference tree. In this procedure, the likelihood (*L*<sub>ref</sub>) of each site is calculated on the reference tree (excluding fossil taxa). Next, the likelihood (*L*<sub>n</sub>) of each site is calculated along each *n* of 100 randomly generated phylogenies. If the likelihood of the site is higher along the reference tree than the current random tree, the weight of the site is incremented by one. Thus, site *j* recieves the integer weight:
+
+$$\overrightarrow{W}^{int}_j = \sum\limits_{n=1}^{100}\delta_nj (Eqn. 7)$$
+
+where *&delta;<sub>nj</sub>* = 1 if:
+
+$$L_{ref} > L_n (Eqn. 8)$$
+
+and  *&delta;<sub>nj</sub>* = 0 if:
+
+$$L_{ref} < L_n (Eqn. 9)$$
+
+This yields a weight vector that is the same length as the character matrix, with each site possessing a weight between 0 and 100. The sites are then weighted using one of three schemes: 1) whole integer values, where the weight equals the value obtained from equation 7, 2) a floating point value between 0 and 1, where the value generated from the random comparison is divided by 100, and 3) a binary value where the weight is equal to 1 if the site displayed a higher likelihood in the reference tree than 95 or more of the random trees, and 0 if less than 95: 
+
+$$\overrightarrow{W}^{binary}_j = 1$$
+
+$$if $$
+
+$$\overrightarrow{W}^{int}_j > 95 $$
+
+and
+
+$$\overrightarrow{W}^{binary}_j = 0 $$
+
+$$if$$
+
+$$ \overrightarrow{W}^{int}_j less than 95$$
+
 
 In application, I found that integer weighting caused poor MCMC mixing, and so the floating and binary schemes are probably most practical in most cases. Since it filters out discordant sites completely, the binary scheme is enforces a harsher penalty than the floating and integer schemes, and so might be of greatest use in particularly noisy datasets. As an additional note, although these procedures share similar terminology to the site weights calculated during parsimony analysis of multistate characters, they differ in their purpose. Parsimony site weights are intended to normalize the contribution of characters with differing state spaces to the overall tree length. In contrast, the site weighting approach deployed here is designed to decrease the contribution of sites that disagree with the reference topology to the overall tree likelihood, instead highlighting signal that is taken to be more reliable. As a result, the guide tree is used to identify sites that are most likely to reliably inform fossil placements. 
 
@@ -127,7 +156,7 @@ Application of the fossil placement method to the Vitaceae dataset showed genera
 
 ![](/home/tomo/projects/fossil_placement/vitfig.svg) 
 
-*Figure 1.* Vitaceae fossil placements. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement.
+**Figure 1.** Vitaceae fossil placements. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement.
 
 The remaining two fossils are substantially less stable in their placements. *Ampelocissus parvisemina* shows erratic placement, alternately occupying clades shared by crown *Vitis* or *Nekemias* in the best exponential and dirichlet prior runs, respectively. Its placement also changes across different runs using the same prior, and shows poor support in all cases. Under the exponential prior, the *Ampelocissus parvisemina* placement shows a 0.2 posterior probability, which decreases to 0.058 under the dirichlet prior.  Similarly, *Vitis magnisperma* alternately resolves into clades shared by crown *Cissus* and *Ampelocissus* under the exponential and dirichlet priors, with posterior support values of 0.23 and 0.54, respectively.
 
