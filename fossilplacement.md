@@ -101,7 +101,7 @@ $$\overrightarrow{W}^{binary}_j = 0 $$
 
 $$if$$
 
-$$ \overrightarrow{W}^{int}_j less than 95$$
+$$ \overrightarrow{W}^{int}_j  95$$
 
 
 In application, I found that integer weighting caused poor MCMC mixing, and so the floating and binary schemes are probably most practical in most cases. Since it filters out discordant sites completely, the binary scheme is enforces a harsher penalty than the floating and integer schemes, and so might be of greatest use in particularly noisy datasets. As an additional note, although these procedures share similar terminology to the site weights calculated during parsimony analysis of multistate characters, they differ in their purpose. Parsimony site weights are intended to normalize the contribution of characters with differing state spaces to the overall tree length. In contrast, the site weighting approach deployed here is designed to decrease the contribution of sites that disagree with the reference topology to the overall tree likelihood, instead highlighting signal that is taken to be more reliable. As a result, the guide tree is used to identify sites that are most likely to reliably inform fossil placements. 
@@ -152,11 +152,15 @@ Overall, the simulations demonstrate the efficacy of the present method for  the
 
 *Vitaceae dataset:*
 
-Application of the fossil placement method to the Vitaceae dataset showed generally positive results. The weight calibration procedure revealed substantial noise in the dataset, with 10-12 of 51 sites failing to favor the molecular reference tree over the random trees at least 95% of the time across all runs. Despite this noise, the binary weighting scheme appeared to adequately filter through this noise to generate biologically reasonable results. *Vitis tiffneyi*, *Parthenocissus_clarnensis* , and *Ampelopsis rooseae* all share clades with the extant members of their respective genera. *Palaeovitis_paradoxa*, and *Cissocarpus jackesiae*, which represent genera with no extant species, both group confidently with separate, non-monophyletic groups of crown *Cissus*.  *Ampelocissus wildei* is placed convidently along with crown *Cissus*, separated by only anode from *Palaeovitis paradoxa*. All six of these taxa are stable in their placements, grouping within the same clades across runs, and when both the exponential and empirical compound dirichlet priors are applied. 
+Application of the fossil placement method to the Vitaceae dataset showed generally positive results. The weight calibration procedure revealed substantial noise in the dataset, with 10-12 of 51 sites failing to favor the molecular reference tree over the random trees at least 95% of the time across all runs. Despite this noise, the binary weighting scheme appeared to adequately filter through this noise to generate biologically reasonable results. *Vitis tiffneyi*, *Parthenocissus_clarnensis* , and *Ampelopsis rooseae* all share clades with the extant members of their respective genera. *Palaeovitis_paradoxa*, and *Cissocarpus jackesiae*, which represent genera with no extant species, both group confidently with separate, non-monophyletic groups of crown *Cissus*.  *Ampelocissus wildei* is placed convidently along with crown *Cissus*, separated by only a node from *Palaeovitis paradoxa*. All six of these taxa are stable in their placements, grouping within the same clades across runs, and when both the exponential and empirical compound dirichlet priors are applied. 
 
 ![](/home/tomo/projects/fossil_placement/vitfig.svg) 
 
-**Figure 1.** Vitaceae fossil placements. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement.
+**Figure 1.** Vitaceae fossil placements inferred under the exponential branch length prior. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement. Topology is summarized from the posterior using the set of maximally credible clades (MCC). 
+
+![](/home/tomo/projects/fossil_placement/vitfigdirichlet.svg) 
+
+**Figure 2.** NEED TO REDO Vitaceae fossil placements inferred under the compound dirichlet branch length prior. Fossil taxa and branches are highlighted in red. Values following fossil tip labels indicate posterior support for placement. Topology is summarized from the posterior using the set of maximally credible clades (MCC). 
 
 The remaining two fossils are substantially less stable in their placements. *Ampelocissus parvisemina* shows erratic placement, alternately occupying clades shared by crown *Vitis* or *Nekemias* in the best exponential and dirichlet prior runs, respectively. Its placement also changes across different runs using the same prior, and shows poor support in all cases. Under the exponential prior, the *Ampelocissus parvisemina* placement shows a 0.2 posterior probability, which decreases to 0.058 under the dirichlet prior.  Similarly, *Vitis magnisperma* alternately resolves into clades shared by crown *Cissus* and *Ampelocissus* under the exponential and dirichlet priors, with posterior support values of 0.23 and 0.54, respectively.
 
@@ -168,11 +172,14 @@ Analysis of the carnivoran dataset also yielded generally reasonable results. Th
 
 ![](/home/tomo/projects/fossil_placement/carnfig.svg) 
 
-**Figure 2.** Fossil placemnts on the carnivoran dataset.
+**Figure 3.** Fossil placements inferred from the carnivoran dataset using the compound Dirichlet prior. Placements are displayed as the maximum clade credibility summary of the posterior distribution of trees. Branch lengts represent morphological disparity. Values trailing fossil tip names display posterior support.
 
-In both datasets, the method provides conservative estimates of uncertainty in the fossil placements, displaying generally low posterior support, except when placements are exceptionally stable such as with *Ampelocissus wildei*. This is especially important in 'rogue' taxa such as *Vitis magnisperma*. One outstanding issue 
+In both datasets, placement under the exponential branch length prior yields conservative estimates of uncertainty in the fossil placements, displaying generally low posterior support, except when placements are exceptionally stable such as with *Ampelocissus wildei*. This is especially important in 'rogue' taxa such as *Vitis magnisperma*. Confusingly, branch support under the compound dirichlet prior is significantly higher across all fossils in the Vitaceae dataset. The positions of the six taxa with stable behavior (listed above) do not change significantly under the compound dirichlet  compared to the exponential prior. Closer examination is needed to better determine the sensitivity of posterior support measures to prior choice observed in Vitaceae. The carnivoran dataset does not exhibit the same behavior, with both branch support and fossil placements stable across priors. 
 
-*Conclusions:*
+Moving forward, it will be important to explore the behavior of this method when applied to morphometric data collected under a variety of approaches and sampling schemes. The success of the weight calibrations on the simulated and empirical datasets suggests the possibility of applying the method to very large morphometric datasets by providing a means to filter through the noise that may occur in datasets sampled densely across taxa and organs. Despite the optimism, the methods described here will may also require extensions to adequately accommodate heterogeneity across morphological sites and taxa. Nevertheless, they provide a means to move forward, and should encourage the development and exploration of more data sources to determine the most effective means to inform phylogeny using morphometry.
+
+
+**Conclusions:**
 
 The methods described here provide new means for biologists to reliably and confidently place fossils in the tree of life. Although the simulated and empirical analyses show several imperfections and a need for further refinement of these methods,  the overall accuracy and conservative assessment of uncertainty displayed in the examples appear encouraging. WHAT ELSE HERE
 
