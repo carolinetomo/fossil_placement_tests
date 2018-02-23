@@ -166,7 +166,11 @@ Despite the potential frustration caused by the erraticism of the last two taxa,
 
 Analysis of the carnivoran dataset also yielded generally reasonable results. The placements of *Piscophoca pacifica*, *Acrophoca longirostris*, *Enaliarctos emlongii*, and *Allodesmus* agree with previous results (Amson and Muison 2013, Jones et al. 2015). The placement of *Piscophoca pacifica* and *Acrophoca longirostris* differs slightly from the topology used by Jones et al., placing the two taxa in a more nested position. However, this placement is consistent with the results of Amson and Muison.  *Enaliarctos emlongii* and *Allodesmus* resolve in positions identical to the topology used by Jones and colleagues. *Pontolis magnus* is more erratic in its placement, alternating between placement at the center of the unrooted topology, or grouping erroneously with *Vulpes* and *Otocyon*. Nevertheless, like the problem taxa in the Vitaceae example above, the placement of *Pontolis* displays reassuringly weak support, both in terms of its posterior density and in its tendency to group at the center of the tree. Interestingly, although the placements of *Enaliarctos emlongii* and *Allodesmus* remain stable across runs, both display weak support.
 
-In both datasets, the method provides conservative 
+![](/home/tomo/projects/fossil_placement/carnfig.svg) 
+
+**Figure 2.** Fossil placemnts on the carnivoran dataset.
+
+In both datasets, the method provides conservative estimates of uncertainty in the fossil placements, displaying generally low posterior support, except when placements are exceptionally stable such as with *Ampelocissus wildei*. This is especially important in 'rogue' taxa such as *Vitis magnisperma*. One outstanding issue 
 
 *Conclusions:*
 
