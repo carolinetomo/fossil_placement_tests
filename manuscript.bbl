@@ -1,0 +1,262 @@
+\begin{thebibliography}{}
+
+\bibitem[Amson and de~Muizon(2014)Amson and de~Muizon]{amson2014}
+Amson, E. and de~Muizon, C. 2014.
+\newblock A new durophagous phocid (mammalia: Carnivora) from the late neogene
+  of peru and considerations on monachine seals phylogeny.
+\newblock {\em Journal of Systematic Palaeontology\/}, {12}(5): 523--548.
+
+\bibitem[Berger and Stamatakis(2010)Berger and
+  Stamatakis]{berger2010fossilplacement}
+Berger, S.~A. and Stamatakis, A. 2010.
+\newblock Accuracy of morphology-based phylogenetic fossil placement under
+  maximum likelihood.
+\newblock pages 1--9.
+
+\bibitem[Brazeau(2011)Brazeau]{brazeau2011problematic}
+Brazeau, M.~D. 2011.
+\newblock Problematic character coding methods in morphology and their effects.
+\newblock {\em Biological Journal of the Linnean Society\/}, {104}(3):
+  489--498.
+
+\bibitem[Butler and King(2004)Butler and King]{butler2004phylogenetic}
+Butler, M.~A. and King, A.~A. 2004.
+\newblock Phylogenetic comparative analysis: a modeling approach for adaptive
+  evolution.
+\newblock {\em Am. Nat.}, {164}(6): 683--695.
+
+\bibitem[Catalano {\em et~al.}(2010)Catalano, Goloboff, and
+  Giannini]{catalano2010phylogenetic}
+Catalano, S.~A., Goloboff, P.~A., and Giannini, N.~P. 2010.
+\newblock Phylogenetic morphometrics (i): the use of landmark data in a
+  phylogenetic framework.
+\newblock {\em Cladistics\/}, {26}(5): 539--549.
+
+\bibitem[Cavalli-Sforza and Edwards(1967)Cavalli-Sforza and
+  Edwards]{cavalli1967}
+Cavalli-Sforza, L.~L. and Edwards, A.~W. 1967.
+\newblock Phylogenetic analysis. models and estimation procedures.
+\newblock {\em Am. J. Hum. Genet.}, {19}(3): 233.
+
+\bibitem[Felsenstein(1973)Felsenstein]{felsenstein1973}
+Felsenstein, J. 1973.
+\newblock Maximum-likelihood estimation of evolutionary trees from continuous
+  characters.
+\newblock {\em Am. J. Hum. Genet.}, {25}(5): 471.
+
+\bibitem[Felsenstein(1981)Felsenstein]{felsenstein1981evolutionary}
+Felsenstein, J. 1981.
+\newblock Evolutionary trees from dna sequences: a maximum likelihood approach.
+\newblock {\em J. Mol. Evol.}, {17}(6): 368--376.
+
+\bibitem[Felsenstein(1988)Felsenstein]{felsenstein1988phylogenies}
+Felsenstein, J. 1988.
+\newblock Phylogenies and quantitative characters.
+\newblock {\em Annual Review of Ecology and Systematics\/}, {19}(1): 445--471.
+
+\bibitem[Felsenstein(2002)Felsenstein]{felsenstein2002quantitative}
+Felsenstein, J. 2002.
+\newblock Quantitative characters, phylogenies, and morphometrics.
+\newblock {\em Morphology, shape and phylogeny\/}, pages 27--44.
+
+\bibitem[Gonz{\'a}lez-Jos{\'e} {\em et~al.}(2008)Gonz{\'a}lez-Jos{\'e}, Escapa,
+  Neves, C{\'u}neo, and Pucciarelli]{geomorphhominin}
+Gonz{\'a}lez-Jos{\'e}, R., Escapa, I., Neves, W.~A., C{\'u}neo, R., and
+  Pucciarelli, H.~M. 2008.
+\newblock Cladistic analysis of continuous modularized traits provides
+  phylogenetic signals in homo evolution.
+\newblock {\em Nature\/}, {453}(7196): 775.
+
+\bibitem[Guindon(2018)Guindon]{guindon2018accounting}
+Guindon, S. 2018.
+\newblock Accounting for calibration uncertainty: Bayesian molecular dating as
+  a “doubly intractable” problem.
+\newblock {\em Syst. Biol.}
+
+\bibitem[Hastings(1970)Hastings]{hastings1970monte}
+Hastings, W.~K. 1970.
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock {\em Biometrika\/}, {57}(1): 97--109.
+
+\bibitem[Hauser and Presch(1991)Hauser and Presch]{hauser1991effect}
+Hauser, D.~L. and Presch, W. 1991.
+\newblock The effect of ordered characters on phylogenetic reconstruction.
+\newblock {\em Cladistics\/}, {7}(3): 243--265.
+
+\bibitem[Hawkins {\em et~al.}(1997)Hawkins, Hughes, and
+  Scotland]{hawkins1997primary}
+Hawkins, J.~A., Hughes, C.~E., and Scotland, R.~W. 1997.
+\newblock Primary homology assessment, characters and character states.
+\newblock {\em Cladistics\/}, {13}(3): 275--283.
+
+\bibitem[Heath {\em et~al.}(2014)Heath, Huelsenbeck, and
+  Stadler]{heath2014fossilized}
+Heath, T.~A., Huelsenbeck, J.~P., and Stadler, T. 2014.
+\newblock The fossilized birth--death process for coherent calibration of
+  divergence-time estimates.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {111}(29):
+  E2957--E2966.
+
+\bibitem[H{\"o}hna {\em et~al.}(2016)H{\"o}hna, Landis, Heath, Boussau,
+  Lartillot, Moore, Huelsenbeck, and Ronquist]{hohna2016revbayes}
+H{\"o}hna, S., Landis, M.~J., Heath, T.~A., Boussau, B., Lartillot, N., Moore,
+  B.~R., Huelsenbeck, J.~P., and Ronquist, F. 2016.
+\newblock Revbayes: Bayesian phylogenetic inference using graphical models and
+  an interactive model-specification language.
+\newblock {\em Syst. Biol.}, {65}(4): 726--736.
+
+\bibitem[Jones {\em et~al.}(2015)Jones, Smaers, and Goswami]{jones2015impact}
+Jones, K.~E., Smaers, J.~B., and Goswami, A. 2015.
+\newblock Impact of the terrestrial-aquatic transition on disparity and rates
+  of evolution in the carnivoran skull.
+\newblock {\em BMC evolutionary biology\/}, {15}(1): 8.
+
+\bibitem[Klingenberg(2011)Klingenberg]{klingenberg2011morphoj}
+Klingenberg, C.~P. 2011.
+\newblock Morphoj: an integrated software package for geometric morphometrics.
+\newblock {\em Molecular ecology resources\/}, {11}(2): 353--357.
+
+\bibitem[Lewis(2001)Lewis]{lewis_mk}
+Lewis, P.~O. 2001.
+\newblock A likelihood approach to estimating phylogeny from discrete
+  morphological character data.
+\newblock {\em Syst. Biol.}, {50}(6): 913--925.
+
+\bibitem[MacLeod(2002)MacLeod]{macleod2002phylogenetic}
+MacLeod, N. 2002.
+\newblock Phylogenetic signals in morphometric data.
+\newblock {\em Morphology, shape and phylogeny\/}, {100}: 138.
+
+\bibitem[O'Meara {\em et~al.}(2006)O'Meara, An{\'e}, Sanderson, and
+  Wainwright]{o2006testing}
+O'Meara, B.~C., An{\'e}, C., Sanderson, M.~J., and Wainwright, P.~C. 2006.
+\newblock Testing for different rates of continuous trait evolution using
+  likelihood.
+\newblock {\em Evolution\/}, {60}(5): 922--933.
+
+\bibitem[Parins-Fukuchi(2017)Parins-Fukuchi]{parins2017use}
+Parins-Fukuchi, C. 2017.
+\newblock Use of continuous traits can improve morphological phylogenetics.
+\newblock {\em Syst. Biol.}
+
+\bibitem[Pleijel(1995)Pleijel]{pleijel1995character}
+Pleijel, F. 1995.
+\newblock On character coding for phylogeny reconstruction.
+\newblock {\em Cladistics\/}, {11}(3): 309--315.
+
+\bibitem[Pyron(2011)Pyron]{pyron2011divergence}
+Pyron, R.~A. 2011.
+\newblock Divergence time estimation using fossils as terminal taxa and the
+  origins of lissamphibia.
+\newblock {\em Syst. Biol.}, {60}(4): 466--481.
+
+\bibitem[{R Core Team}(2016){R Core Team}]{R}
+{R Core Team} 2016.
+\newblock {\em R: A Language and Environment for Statistical Computing\/}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+
+\bibitem[Rannala {\em et~al.}(2011)Rannala, Zhu, and Yang]{rannala2011tail}
+Rannala, B., Zhu, T., and Yang, Z. 2011.
+\newblock Tail paradox, partial identifiability, and influential priors in
+  bayesian branch length inference.
+\newblock {\em Molecular biology and evolution\/}, {29}(1): 325--335.
+
+\bibitem[Revell(2012)Revell]{revell2012phytools}
+Revell, L.~J. 2012.
+\newblock phytools: an r package for phylogenetic comparative biology (and
+  other things).
+\newblock {\em Methods Ecol. Evol.}, {3}(2): 217--223.
+
+\bibitem[Ronquist {\em et~al.}(2012)Ronquist, Klopfstein, Vilhelmsen,
+  Schulmeister, Murray, and Rasnitsyn]{ronquist2012total}
+Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D.~L.,
+  and Rasnitsyn, A.~P. 2012.
+\newblock A total-evidence approach to dating with fossils, applied to the
+  early radiation of the hymenoptera.
+\newblock {\em Syst. Biol.}, {61}(6): 973--999.
+
+\bibitem[Ronquist {\em et~al.}(2016)Ronquist, Lartillot, and
+  Phillips]{ronquist2016closing}
+Ronquist, F., Lartillot, N., and Phillips, M.~J. 2016.
+\newblock Closing the gap between rocks and clocks using total-evidence dating.
+\newblock {\em Phil. Trans. R. Soc. B\/}, {371}(1699): 20150136.
+
+\bibitem[Scotland and Pennington(2000)Scotland and
+  Pennington]{scotland2000homology}
+Scotland, R. and Pennington, R.~T. 2000.
+\newblock {\em Homology and systematics: coding characters for phylogenetic
+  analysis\/}.
+\newblock CRC Press.
+
+\bibitem[Scotland {\em et~al.}(2003)Scotland, Olmstead, and
+  Bennett]{scotland2003phylogeny}
+Scotland, R.~W., Olmstead, R.~G., and Bennett, J.~R. 2003.
+\newblock Phylogeny reconstruction: the role of morphology.
+\newblock {\em Syst. Biol.}, {52}(4): 539--548.
+
+\bibitem[Sim{\~o}es {\em et~al.}(2017)Sim{\~o}es, Caldwell, Palci, and
+  Nydam]{simoes2017giant}
+Sim{\~o}es, T.~R., Caldwell, M.~W., Palci, A., and Nydam, R.~L. 2017.
+\newblock Giant taxon-character matrices: quality of character constructions
+  remains critical regardless of size.
+\newblock {\em Cladistics\/}, {33}(2): 198--219.
+
+\bibitem[Slater {\em et~al.}(2012)Slater, Harmon, and
+  Alfaro]{slater2012integrating}
+Slater, G.~J., Harmon, L.~J., and Alfaro, M.~E. 2012.
+\newblock Integrating fossils with molecular phylogenies improves inference of
+  trait evolution.
+\newblock {\em Evolution\/}, {66}(12): 3931--3944.
+
+\bibitem[Smith and Hendricks(2013)Smith and Hendricks]{smith2013geometric}
+Smith, U.~E. and Hendricks, J.~R. 2013.
+\newblock Geometric morphometric character suites as phylogenetic data:
+  extracting phylogenetic signal from gastropod shells.
+\newblock {\em Syst. Biol.}, {62}: 366--385.
+
+\bibitem[Soltis {\em et~al.}(2011)Soltis, Smith, Cellinese, Wurdack, Tank,
+  Brockington, Refulio-Rodriguez, Walker, Moore, Carlsward, {\em
+  et~al.}]{soltis2011angiosperm}
+Soltis, D.~E., Smith, S.~A., Cellinese, N., Wurdack, K.~J., Tank, D.~C.,
+  Brockington, S.~F., Refulio-Rodriguez, N.~F., Walker, J.~B., Moore, M.~J.,
+  Carlsward, B.~S., {\em et~al.} 2011.
+\newblock Angiosperm phylogeny: 17 genes, 640 taxa.
+\newblock {\em American Journal of Botany\/}, {98}(4): 704--730.
+
+\bibitem[Sukumaran and Holder(2010)Sukumaran and Holder]{sukumaran2010dendropy}
+Sukumaran, J. and Holder, M.~T. 2010.
+\newblock Dendropy: a python library for phylogenetic computing.
+\newblock {\em Bioinformatics\/}, {26}(12): 1569--1571.
+
+\bibitem[Wiens(2009)Wiens]{wiens2009paleontology}
+Wiens, J.~J. 2009.
+\newblock Paleontology, genomics, and combined-data phylogenetics: can
+  molecular data improve phylogeny estimation for fossil taxa?
+\newblock {\em Systematic Biology\/}, {58}(1): 87--99.
+
+\bibitem[Wiens {\em et~al.}(2010)Wiens, Kuczynski, Townsend, Reeder, Mulcahy,
+  and Sites]{wiens2010combining}
+Wiens, J.~J., Kuczynski, C.~A., Townsend, T., Reeder, T.~W., Mulcahy, D.~G.,
+  and Sites, J.~W. 2010.
+\newblock Combining phylogenomics and fossils in higher-level squamate reptile
+  phylogeny: molecular data change the placement of fossil taxa.
+\newblock {\em Syst. Biol.}, {59}(6): 674--688.
+
+\bibitem[Wilkinson(1995)Wilkinson]{wilkinson1995comparison}
+Wilkinson, M. 1995.
+\newblock A comparison of two methods of character construction.
+\newblock {\em Cladistics\/}, {11}(3): 297--308.
+
+\bibitem[Wright and Hillis(2014)Wright and Hillis]{wright2014bayesian}
+Wright, A.~M. and Hillis, D.~M. 2014.
+\newblock Bayesian analysis using a simple likelihood model outperforms
+  parsimony for estimation of phylogeny from discrete morphological data.
+\newblock {\em PLoS One\/}, {9}(10): e109210.
+
+\bibitem[Yang(2014)Yang]{yang2014molecular}
+Yang, Z. 2014.
+\newblock {\em Molecular evolution: a statistical approach\/}.
+\newblock Oxford University Press.
+
+\end{thebibliography}
