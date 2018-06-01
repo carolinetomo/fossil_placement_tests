@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  23 MAY 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.7)  16 MAY 2018 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**manuscript.tex
-(./manuscript.tex
+**manuscript_biorxiv.tex
+(./manuscript_biorxiv.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -618,8 +618,8 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count110
 \c@LT@chunks=\count111
 \LT@p@ftn=\toks27
-) (./manuscript.aux)
-\openout1 = `manuscript.aux'.
+) (./manuscript_biorxiv.aux)
+\openout1 = `manuscript_biorxiv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
@@ -634,8 +634,7 @@ LaTeX Font Info:    ... okay on input line 52.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 52.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -693,106 +692,113 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 58.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 59.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 57.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 76.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 76.
+ [2]
+LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 85.
+ [3] [4] [5] [6] [7] [8] [9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 194.
+(Font)              <12> on input line 221.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 194.
+(Font)              <8> on input line 221.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 194.
- [8] [9] [10]
+(Font)              <6> on input line 221.
+ [10] [11] [12]
 </home/tomo/projects/fossil_placement_tests/manuscript/fossil_insertion.pdf, id
-=44, 481.0648pt x 1430.26765pt>
+=51, 481.0648pt x 1430.26765pt>
 File: /home/tomo/projects/fossil_placement_tests/manuscript/fossil_insertion.pd
 f Graphic file (type pdf)
 <use /home/tomo/projects/fossil_placement_tests/manuscript/fossil_insertion.pdf
 >
 Package pdftex.def Info: /home/tomo/projects/fossil_placement_tests/manuscript/
-fossil_insertion.pdf  used on input line 300.
+fossil_insertion.pdf  used on input line 327.
 (pdftex.def)             Requested size: 250.38269pt x 650.42363pt.
- [11] [12 </home/tomo/projects/fossil_placement_tests/manuscript/fossil_inserti
-on.pdf>] [13]
-[14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
+
+[13] [14 </home/tomo/projects/fossil_placement_tests/manuscript/fossil_insertio
+n.pdf>] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26]
 </home/tomo/projects/fossil_placement_tests/manuscript/vitfigdirichlet.pdf, id=
-97, 779.19383pt x 870.99077pt>
+105, 779.19383pt x 870.99077pt>
 File: /home/tomo/projects/fossil_placement_tests/manuscript/vitfigdirichlet.pdf
  Graphic file (type pdf)
 <use /home/tomo/projects/fossil_placement_tests/manuscript/vitfigdirichlet.pdf>
 
 Package pdftex.def Info: /home/tomo/projects/fossil_placement_tests/manuscript/
-vitfigdirichlet.pdf  used on input line 703.
+vitfigdirichlet.pdf  used on input line 734.
 (pdftex.def)             Requested size: 469.75513pt x 650.46382pt.
 
-Overfull \hbox (17.62492pt too wide) in paragraph at lines 703--704
+Overfull \hbox (17.62492pt too wide) in paragraph at lines 734--735
 [][]  
  []
 
-[25] [26 </home/tomo/projects/fossil_placement_tests/manuscript/vitfigdirichlet
-.pdf>] [27]
-</home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf, id=116, 682
+[27] [28 </home/tomo/projects/fossil_placement_tests/manuscript/vitfigdirichlet
+.pdf>] [29]
+</home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf, id=123, 682
 .80093pt x 948.54375pt>
 File: /home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf Graphic
  file (type pdf)
 <use /home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf>
 Package pdftex.def Info: /home/tomo/projects/fossil_placement_tests/manuscript/
-carnfig.pdf  used on input line 758.
+carnfig.pdf  used on input line 789.
 (pdftex.def)             Requested size: 469.75787pt x 650.45776pt.
 
-Overfull \hbox (17.62767pt too wide) in paragraph at lines 758--759
+Overfull \hbox (17.62767pt too wide) in paragraph at lines 789--790
 [][]  
  []
 
-[28] [29 </home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf>]
-[30] [31] [32] [33] [34]
-</home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf, id=147, 607.
+[30] [31 </home/tomo/projects/fossil_placement_tests/manuscript/carnfig.pdf>]
+[32] [33] [34] [35] [36]
+</home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf, id=154, 607.
 9293pt x 999.4723pt>
 File: /home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf Graphic 
 file (type pdf)
 <use /home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf>
 Package pdftex.def Info: /home/tomo/projects/fossil_placement_tests/manuscript/
-vitfig.pdf  used on input line 868.
+vitfig.pdf  used on input line 902.
 (pdftex.def)             Requested size: 469.76746pt x 650.44235pt.
 
-Overfull \hbox (17.63725pt too wide) in paragraph at lines 868--869
+Overfull \hbox (17.63725pt too wide) in paragraph at lines 902--903
 [][]  
  []
 
-[35] [36 </home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf>]
-[37] (./manuscript.bbl
+[37] [38 </home/tomo/projects/fossil_placement_tests/manuscript/vitfig.pdf>]
+[39] (./manuscript_biorxiv.bbl
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
- [38] [39] [40] [41] [42]) [43] (./manuscript.aux) ) 
+ [40] [41] [42] [43] [44]) [45]
+(./manuscript_biorxiv.aux) ) 
 Here is how much of TeX's memory you used:
- 5777 strings out of 492982
- 83464 string characters out of 6138580
- 160068 words of memory out of 5000000
- 9222 multiletter control sequences out of 15000+600000
- 32923 words of font info for 42 fonts, out of 8000000 for 9000
+ 5783 strings out of 492982
+ 83590 string characters out of 6138580
+ 160002 words of memory out of 5000000
+ 9226 multiletter control sequences out of 15000+600000
+ 37363 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,38p,1502b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/font
-s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
-/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on manuscript.pdf (43 pages, 225271 bytes).
+ 42i,11n,38p,1510b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a
+.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on manuscript_biorxiv.pdf (45 pages, 237010 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 232 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

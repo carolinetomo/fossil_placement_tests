@@ -51,10 +51,6 @@
 \linenumbers
 \begin{document}
 
-\setcounter{page}{1}
-
-\newpage
-
 \noindent \textbf{\textsc{Abstract}}
 
 Jointly developing a comprehensive tree of life  from living and fossil taxa has long been a fundamental goal in evolutionary biology. One major challenge has stemmed from difficulties in merging evidence  from extant and extinct organisms.  While these efforts	 have resulted in varying stages of synthesis, they have been hindered by their dependence on  qualitative descriptions of morphology. Though rarely applied to phylogenetic inference, traditional and geometric morphometric data can improve these issues by generating more rigorous ways to quantify variation in morphological structures. They may also facilitate the rapid and objective aggregation of large morphological datasets. I describe a new Bayesian method that leverages quantitative trait data to reconstruct the positions of fossil taxa on fixed reference trees composed of extant taxa. Unlike most formulations of phylogenetic Brownian motion models, this method expresses branch lengths in units of morphological disparity, suggesting a new framework through which to construct Bayesian node calibration priors for molecular dating and explore comparative patterns in morphological disparity. I am hopeful that the approach described here will help to facilitate a deeper integration of neo- and paleontological data to move morphological phylogenetics further into the genomic era.
@@ -67,7 +63,7 @@ contentious, topic in evolutionary biology. This has manifested over the past de
 in the rapid proliferation of 'total-evidence' methods that seek to simultaneously reconstruct the relationships
 and divergence times between living and fossil taxa using cladistic morphological matrices.
  These approaches, based upon probabilistic models of molecular and
-morphological character evolution, have increased understanding of evolutionary tempo across large clades,
+morphological character, have increased understanding of evolutionary tempo across large clades,
 and provide compelling evidence in favor of incorporating fossils in
 phylogenetic analyses \citep{pyron2011divergence,ronquist2012total}. This can
  benefit both paleo- and neontological studies by improving the accuracy and treatment of
@@ -293,9 +289,9 @@ and reinserting a fossil taxon to generate a proposal. This is a
 specific case of the standard subtree pruning and regrafting (SPR) move
 for unrooted tees (Fig. 1). In this procedure, the two edge lengths that link the fossil to the rest of the tree are merged when the fossil tip is pruned,
 while the edge upon which the tip is inserted is split into two. The move is described in detail, along with a full derivation of the appropriate
-MH proposal ratio in \citet[p. 287]{yang2014molecular}.  Branch lengths are updated both individually and by randomly applying a
+MH proposal ratio in \cite[p. 287]{yang2014molecular}.  Branch lengths are updated both individually and by randomly applying a
 multiplier to subclades of the tree. MH proposal ratios for branch length updates follow the derivations given for the  the 'multiplier' or 'proportional scaling'
- move described by \citet[p. 225]{yang2014molecular}.
+ move described by \cite[p. 225]{yang2014molecular}.
 
 \includegraphics[width=88mm,height=\textheight]{/home/tomo/projects/fossil_placement_tests/manuscript/fossil_insertion.pdf}
 
@@ -336,7 +332,7 @@ Once an initial placement has been assigned for  all of the fossils,
 the branch lengths are optimized on the complete tree. These starting lengths can be used to inform branch
 length priors used during MCMC simulation. One problem with interpreting
 the results of the ML approach on their own is that it has a strong
-propensity to becoming trapped in local optima. As a result, it should be
+propensity to becoming trapped in local optima. As a result, it should
 interpreted cautiously, and not used without further MCMC searching. In the
 applications here, the topologies achieved from this procedure are
 used only to construct  starting trees, while the branch
@@ -383,7 +379,7 @@ L_{ref} < L_n
 This yields a weight vector that is the same length as the character
 matrix, with each site possessing a weight between 0 and 100. The sites
 are then weighted using one of three schemes: 1) whole integer values,
-where the weight equals the value obtained from equation 11, 2) a
+where the weight equals the value obtained from equation 7, 2) a
 floating point value between 0 and 1, where the value generated from the
 random comparison is divided by 100, and 3) a binary value where the
 weight is equal to 1 if the site displayed a higher likelihood in the
@@ -420,7 +416,7 @@ most cases. The poor mixing achieved by the integer scheme is likely due to the 
 This causes nearly all proposals to be rejected, substantially reducing the efficiency of the algorithm. In effect,
 the MCMC algorithm becomes a very inefficient hill-climbing ML search, since only proposals that increase the likelihood are accepted.
  Since it filters out discordant sites completely, the binary
-scheme enforces a harsher penalty than the floating and integer
+scheme is enforces a harsher penalty than the floating and integer
 schemes, and so might be of greatest use in particularly noisy datasets.
 As an additional note, although these procedures share similar
 terminology to the site weights calculated during parsimony analysis of
@@ -460,19 +456,21 @@ performed using the "fastBM" function in the phytools package \citep{revell2012p
 All traits were simulated using a rate parameter of 1.0. Random trees
 were generated by collapsing the true tree into a star topology using
 the "di2multi" function, which was randomly resolved using the "multi2di" function.
-Branch lengths were then assigned randomly by drawing from an exponential
-distribution with mean set to 1. The simulated data sets, Newick trees, and all scripts used
+Branch lengths were than assigned randomly by drawing from an exponential
+distribution with mean set to 1. The simulated data sets and all scripts used
 to generate them are available at https://github.com/carolinetomo/fossil\_placement\_tests. 
 
 I restricted the simulations to a fairly small number of traits because
 this reflected a similar size as the two empirical datasets.
 This level of sampling is fairly common among existing continuous
-datasets, which are often compiled from only one or two anatomical regions (eg., "cranium", "pelvis", "leaf"). 
-In the future, methods such as that described here may encourage the assembly of more comprehensive quantitative morphometric datasets, but
+datasets, which are typically compiled from only one or two organs. In
+the future, I am hopeful that quantitative morphometric datasets will
+increase in size to encompass much broader sampling across organs, but
 at present, it seemed most sensible to examine the level of sampling
-expected from existing datasets. Each simulated trait was evolved independently (ie. displaying no covariance with other sites). 
-This is because 1) I showed in a previous study \citep{parins2017use}
-that sitewise covariance does not in and of itself significantly handicap reconstructions from
+expected from existing datasets. Unlike in a previous paper
+(Parins-Fukuchi 2017), I also did not simulate traits that display
+covariance among sites. This is because 1) I showed in the previous study
+that covariance does not in and of itself significantly handicap reconstructions from
 continuous traits, and 2) because in this study I was primarily
 interested in examining the effect of inducing random noise without the
 potentially confounding effect of covariance. Although covariance has
@@ -499,9 +497,7 @@ simulated data with a mean of 1.0. To evaluate the accuracy of the
 placement method, I then calculated the distances between the true and
 reconstructed fossil placements. This was calculated by counting the
 number of nodes separating the true insertion branch from the
-reconstructed insertion branch. These distances were divided by the largest possible 
-distance between two tips in the simulated tree to yield a measure of placement error falling between 0 and 1.
- Placement accuracy was evaluated using the
+reconstructed insertion branch. Placement accuracy was evaluated using the
 \emph{maximum a posteriori} (MAP) summaries of tree distributions. MAP
 trees represent the single most sampled tree during the MCMC run.
 Tree summary and placement distances
@@ -592,23 +588,25 @@ the mean across all sampled trees.
 Reconstructions of fossil placements from the simulated datasets showed
 that the method is generally accurate in placing fossil taxa (Tables 1 and 2).
 In the absence of noisy traits, reconstruction is nearly always correct,
-displaying 0.3\% error  on average. In the presence of random
+with the reconstructed position of each fossil placed less than 0.1
+nodes away from the true position on average. In the presence of random
 noise, the reconstructions are fairly accurate, except when noise
 becomes severe. Nevertheless, even in the extreme case where half 
 of the characters display completely random signal, the estimated fossil positions
-tend to fall within the correct region of the tree, exhibiting between 7.8\% (with binary weighting under the compound Dirichlet prior) and 17.6\% (unweighted, under the exponential prior)  
-placement error on average under the exponential prior when
+tend to fall within the correct region of the tree, falling 1.85 and
+\textasciitilde{}3 nodes away from the correct placement on average under the exponential prior when
 alignments contain an equal number of clean and dirty sites. And although the procedure
-reconstructs fossil positions that are quite distant in the worst case (18\% error under the exponential prior with no weighting scheme),
-application of the weighting procedures reduces placement error by half, even though
+reconstructs fossil positions that are quite distant in the worst case (3 nodes away, on average),
+application of the weighting procedures improves reconstructions, even though
 the signal-to-noise ratio is quite high.
 
 In the \emph{cophymaru} implementation, the compound Dirichlet prior
 outperforms the exponential branch length prior on the simulated datasets (Table 2).
-Placement error  lower under the compound Dirichlet in all but one of the comparisons. The improvement
+The mean distance between the true positions of fossils and their inferred placements is
+smaller under the compound Dirichlet in all but one of the comparisions. The improvement
 exhibited under the compound Dirichlet is greatest when using the binary weighting scheme,
-resulting in a  2\% reduction in error compared to exponential prior on the noisiest datasets.
- The improvement also increases with the noisiness of the simulated 
+resulting in placements approximately 0.2-0.4 nodes closer to the true position across all
+simulated datasets. The improvement also increases with the noisiness of the simulated 
 dataset, with the 50 clean+50 dirty dataset displaying the largest increase in placement accuracy.
 This result suggests that the compound Dirichlet branch prior combined with  binary weighting scheme
 may be the ideal mode through which to analyze particularly noisy datasets.
@@ -616,7 +614,7 @@ may be the ideal mode through which to analyze particularly noisy datasets.
 Across both branch length priors, binary weighting shows improved accuracy over float and
 unweighted analyses. However, despite the apparent advantage of binary
 weighting, it is possible that the float weighting scheme could remain
-beneficial in cases where the distribution of noise varies between
+beneficial in cases where the distribution of noise varies betwen
 different regions of trees. This is because the float weighting scheme
 limits the contribution of noisy sites to the likelihood rather than
 entirely excluding them. This possibility was not examined in this set
@@ -653,32 +651,34 @@ empirical datasets.
 dataset & binary\_weights & float\_weights & unweighted\tabularnewline
 \midrule
 \endhead
-50 clean & 0.003 & 0.004  & 0.003 \tabularnewline
-50 clean + 10 dirty & 0.008  & 0.065  & 0.132 \tabularnewline
-50 clean + 25 dirty & 0.051 & 0.140  & 0.163  \tabularnewline
-50 clean + 50 dirty & 0.097  & 0.162 & 0.176 \tabularnewline
+50 clean & 0.065 & 0.067 & 0.059\tabularnewline
+50 clean + 10 dirty & 0.156 & 1.234 & 2.516\tabularnewline
+50 clean + 25 dirty & 0.965 & 2.623 & 3.105\tabularnewline
+50 clean + 50 dirty & 1.85 & 3.069 & 3.348\tabularnewline
 \bottomrule
 \end{longtable}
 
-\textbf{Table 1.} Mean error when placing simulated fossils under the exponential branch length prior. Error is measured as the average number of nodes
+\textbf{Table 1.} Mean distances of true and reconstructed fossil
+placements under the exponential branch length prior. Distances are measured as the average number of nodes
 separating reconstructed placements from their true positions across all
-100 replicates of each dataset divided by the maximum possible path length between nodes.
+100 replicates of each dataset.
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule
 dataset & binary\_weights & float\_weights & unweighted\tabularnewline
 \midrule
 \endhead
-50 clean & 0.003  & 0.003 & 0.004 \tabularnewline
-50 clean + 10 dirty & 0.007 & 0.063 & 0.130 \tabularnewline
-50 clean + 25 dirty & 0.040 & 0.134 & 0.167 \tabularnewline
-50 clean + 50 dirty & 0.078 & 0.156  & 0.175 \tabularnewline
+50 clean & 0.054  & 0.053 & 0.072 \tabularnewline
+50 clean + 10 dirty & 0.131 & 1.192 & 2.466 \tabularnewline
+50 clean + 25 dirty & 0.751 & 2.552 & 3.175 \tabularnewline
+50 clean + 50 dirty & 1.474 & 2.982  & 3.324\tabularnewline
 \bottomrule
 \end{longtable}
 
-\textbf{Table 2.} Mean error when placing simulated fossils under the compound Dirichlet branch length prior. Error is measured as the average number of nodes
+\textbf{Table 2.} Mean distances of true and reconstructed fossil
+placements under the compound Dirichlet branch length prior. Distances are measured as the average number of nodes
 separating reconstructed placements from their true positions across all
-100 replicates of each dataset divided by the maximum possible path length between nodes.
+100 replicates of each dataset.
 
 \noindent\emph{Vitaceae dataset:}
 
@@ -831,17 +831,20 @@ phylogenetics that reduces common sources of bias in morphological
 datasets by filtering data matrices statistically rather than through subjective judgement.
  This would encourage an exploration of conflict and
 concordance in signal through quantitative data analysis rather than by
-attempting to filter subjectively at the stage of data collection. One major gap in the approach 
+attempting to filter during the stage of data collection. They provide
+a means to move forward, and should encourage the development and
+exploration of more data sources to determine the most effective means
+to inform phylogeny using morphometry. One major gap in the approach 
 presented here concerns the assumption that all continuous traits under
 analysis evolve under a shared rate. In the empirical analyses performed 
 above, I rescaled the traits at each 
-site so that the variance is set to be equal. However, it 
+site so that the variance is set to be equal. However, moving forward, it 
 will be important to explore model extensions that accommodate rate
 heterogeneity across characters. This has been done in continuous characters
 to positive effect by \cite{schraiber2013inferring} using a Gamma site-rate
 model, and adapting this or alternative approaches to modeling rate 
 heterogeneity \citep{huelsenbeck2007nonparametric} will be a key 
-priority in future extensions the method.
+priority in extending the method described here moving forward.
 
 
 \noindent\textbf{Conclusions:}
@@ -872,10 +875,6 @@ exponential branch length prior. Fossil taxa and branches are
 highlighted in red. Values following fossil tip labels indicate
 posterior support for placement. Topology is summarized from the
 posterior using the set of maximally credible clades (MCC). The placements are depicted only in the subclade containing all 6 fossils.
-
-
-
-\newpage
 
 
 %\bibliography{references}
