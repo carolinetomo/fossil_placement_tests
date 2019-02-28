@@ -1,0 +1,6 @@
+pollen_seeds.cleaned.52.matchedALL.scaleR.phy is the matrix used to generate the
+Vitaceae trees presented in Figs 2 and S1.
+
+vit.phy is the molecular alignment generated using PHLAWD that was used to build the molecular scaffolding.
+
+

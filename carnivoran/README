@@ -1,0 +1,5 @@
+carn.MCC.tre is the newick representation of the tree in figure 1.
+
+carn.means.scaled.phy is the landmark matrix used to reconstruct the tree.
+
+carn.sub.tre is the extant reference tree used to place fossils.

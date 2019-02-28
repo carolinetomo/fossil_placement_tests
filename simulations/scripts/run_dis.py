@@ -16,7 +16,7 @@ for fl in os.listdir(alndir):
     curaln = alndir+fl
     #curtree = treedir+pre[0]+".tre"
     cmd = "maru -t "+curtree+" -m "+curaln+" -fos "+fos
-    cmd += " -gen 1000000 -samp 1000 -pr 250000 -bl 1 -T 3 -W 20 -w flat -o "
+    cmd += " -gen 1000000 -samp 1000 -pr 250000 -bl 1 -T 1 -W 5 -w bin -o "
     cmd += rep+alndir.replace("/","") #pre[0] 
     if count % 10 == 0:
         print count
