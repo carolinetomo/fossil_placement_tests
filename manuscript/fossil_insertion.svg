@@ -9,15 +9,45 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="169.07494mm"
-   height="502.68161mm"
-   viewBox="0 0 169.07494 502.68162"
+   width="222.13631mm"
+   height="330.50067mm"
+   viewBox="0 0 222.13631 330.50068"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="fossil_insertion.svg">
   <defs
      id="defs2">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4712"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4691"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -56,9 +86,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.71"
-     inkscape:cx="-48.413602"
-     inkscape:cy="974.23138"
+     inkscape:zoom="0.50204581"
+     inkscape:cx="129.95485"
+     inkscape:cy="495.06341"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +109,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,7 +117,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-2.1369689,-55.212973)">
+     transform="translate(24.912439,-55.212973)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot6092"
@@ -99,196 +129,93 @@
            height="330.64713"
            x="184.24614"
            y="383.21539" /></flowRegion><flowPara
-         id="flowPara6098" /></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 18.440639,64.249215 c 24.03609,24.036092 43.78668,43.786675 43.78668,43.786675 -43.97301,43.97301 -43.97301,43.97301 -43.97301,43.97301"
-       id="path3713-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 62.227319,108.03589 H 109.36787 L 153.24771,64.156049"
-       id="path3717-7"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 109.36787,108.03589 44.43882,44.43882"
-       id="path3719-3"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="10.242278"
-       y="62.199627"
-       id="text3761-2"><tspan
-         sodipodi:role="line"
-         id="tspan3759-6"
-         x="10.242278"
+         id="flowPara6098" /></flowRoot>    <g
+       id="g4970">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3713-3"
+         d="m 18.440639,64.249215 c 24.03609,24.036092 43.78668,43.786675 43.78668,43.786675 -43.97301,43.97301 -43.97301,43.97301 -43.97301,43.97301"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3717-7"
+         d="M 62.227319,108.03589 H 109.36787 L 153.24771,64.156049"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3719-3"
+         d="m 109.36787,108.03589 44.43882,44.43882"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text3761-2"
          y="62.199627"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">A</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="152.94299"
-       y="63.752514"
-       id="text3761-3-5"><tspan
-         sodipodi:role="line"
-         id="tspan3759-38-2"
-         x="152.94299"
+         x="10.242278"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="62.199627"
+           x="10.242278"
+           id="tspan3759-6"
+           sodipodi:role="line">A</tspan></text>
+      <text
+         id="text3761-3-5"
          y="63.752514"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">C</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="154.64096"
-       y="160.1604"
-       id="text3761-0-6"><tspan
-         sodipodi:role="line"
-         id="tspan3759-4-5"
-         x="154.64096"
+         x="152.94299"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="63.752514"
+           x="152.94299"
+           id="tspan3759-38-2"
+           sodipodi:role="line">C</tspan></text>
+      <text
+         id="text3761-0-6"
          y="160.1604"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">D</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="10.823333"
-       y="160.06508"
-       id="text3761-8-4"><tspan
-         sodipodi:role="line"
-         id="tspan3759-3-87"
-         x="10.823333"
+         x="154.64096"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="160.1604"
+           x="154.64096"
+           id="tspan3759-4-5"
+           sodipodi:role="line">D</tspan></text>
+      <text
+         id="text3761-8-4"
          y="160.06508"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">B</tspan></text>
-    <g
-       id="g1172"
-       transform="translate(-10.6933,136.29395)">
-      <g
-         transform="translate(-159.49531,125.21127)"
-         id="g1133">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 201.76812,84.16018 c 109.09111,0 109.09111,0 109.09111,0"
-           id="path898"
-           inkscape:connector-curvature="0" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 201.76812,84.16018 c 0,46.6596 0,46.6596 0,46.6596"
-           id="path900"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="186.07466"
-           y="94.439362"
-           id="text3761-2-3"><tspan
-             sodipodi:role="line"
-             id="tspan3759-6-6"
-             x="186.07466"
-             y="94.439362"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">A</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="185.87312"
-           y="106.87189"
-           id="text3761-8-4-7"><tspan
-             sodipodi:role="line"
-             id="tspan3759-3-87-5"
-             x="185.87312"
-             y="106.87189"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">B</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="185.74393"
-           y="118.66525"
-           id="text3761-3-5-3"><tspan
-             sodipodi:role="line"
-             id="tspan3759-38-2-5"
-             x="185.74393"
-             y="118.66525"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">C</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="185.87312"
-           y="129.96648"
-           id="text3761-0-6-6"><tspan
-             sodipodi:role="line"
-             id="tspan3759-4-5-2"
-             x="185.87312"
-             y="129.96648"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">D</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="201.53247"
-           y="80.278549"
-           id="text3761-2-3-9"><tspan
-             sodipodi:role="line"
-             id="tspan3759-6-6-1"
-             x="201.53247"
-             y="80.278549"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">trait1</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="229.82884"
-           y="80.278549"
-           id="text3761-2-3-9-2"><tspan
-             sodipodi:role="line"
-             id="tspan3759-6-6-1-7"
-             x="229.82884"
-             y="80.278549"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">trait2</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="258.17688"
-           y="80.278549"
-           id="text3761-2-3-9-0"><tspan
-             sodipodi:role="line"
-             id="tspan3759-6-6-1-9"
-             x="258.17688"
-             y="80.278549"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">trait3</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="286.6955"
-           y="80.278549"
-           id="text3761-2-3-9-0-3"><tspan
-             sodipodi:role="line"
-             id="tspan3759-6-6-1-9-6"
-             x="286.6955"
-             y="80.278549"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">trait4</tspan></text>
-      </g>
+         x="10.823333"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="160.06508"
+           x="10.823333"
+           id="tspan3759-3-87"
+           sodipodi:role="line">B</tspan></text>
+      <text
+         id="text3761-2-3-9-06"
+         y="160.28987"
+         x="55.488335"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="160.28987"
+           x="55.488335"
+           id="tspan3759-6-6-1-2"
+           sodipodi:role="line">Reference tree</tspan></text>
     </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="55.488335"
-       y="160.28987"
-       id="text3761-2-3-9-06"><tspan
-         sodipodi:role="line"
-         id="tspan3759-6-6-1-2"
-         x="55.488335"
-         y="160.28987"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">Reference tree</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-48.10482"
-       y="180.96399"
+       x="-25.346521"
+       y="178.31819"
        id="text3761-2-3-9-06-6"><tspan
          sodipodi:role="line"
          id="tspan3759-6-6-1-2-1"
-         x="-48.10482"
-         y="180.96399"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">Calculate likelihood of each site separately along reference tree</tspan></text>
+         x="-25.346521"
+         y="178.31819"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332">Calculate likelihood of each site along reference tree</tspan></text>
     <g
        id="g1326"
-       transform="translate(2.9812207,-73.039906)">
+       transform="translate(6.2392838,-73.039906)">
       <g
          transform="matrix(0.4056028,0,0,0.4056028,10.573263,161.47977)"
          id="g1274">
@@ -308,17 +235,6 @@
            id="path3719-3-9"
            inkscape:connector-curvature="0" />
       </g>
-      <text
-         id="text3761-2-3-9-06-2"
-         y="376.10211"
-         x="25.213261"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
-           y="376.10211"
-           x="25.213261"
-           id="tspan3759-6-6-1-2-8"
-           sodipodi:role="line">Generate 100 random trees</tspan></text>
       <g
          transform="matrix(0.40560281,0,0,0.40560281,79.456833,162.08544)"
          id="g1274-3">
@@ -357,6 +273,51 @@
            id="path3719-3-9-4"
            inkscape:connector-curvature="0" />
       </g>
+    </g>
+    <g
+       id="g5040"
+       transform="translate(0,-110.59596)">
+      <text
+         id="text3761-2-3-9-06-6-3"
+         y="416.26187"
+         x="85.986618"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan4645"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="416.26187"
+           x="85.986618"
+           sodipodi:role="line"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+             id="tspan4601">Calculate likelihood of each site along</tspan></tspan><tspan
+           id="tspan4653"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:0.26458332"
+           y="429.49103"
+           x="85.986618"
+           sodipodi:role="line"><tspan
+   id="tspan4655"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';text-align:center;text-anchor:middle;stroke-width:0.26458332"> </tspan>each of 100 random trees</tspan></text>
+      <text
+         id="text3761-2-3-9-06-6-3-7"
+         y="480.79633"
+         x="86.177826"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan4653-5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="480.79633"
+           x="86.177826"
+           sodipodi:role="line">De-weight contribution of site each time</tspan><tspan
+           id="tspan4687"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="494.02548"
+           x="86.177818"
+           sodipodi:role="line">random tree likelihood is higher than reference tree</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4689"
+         d="m 86.085279,439.39106 c 0,24.59506 0,24.59506 0,24.59506"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
     </g>
   </g>
 </svg>

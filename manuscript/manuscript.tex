@@ -592,24 +592,20 @@ the mean across all sampled trees.
 Reconstructions of fossil placements from the simulated datasets showed
 that the method is generally accurate in placing fossil taxa (Tables 1 and 2).
 In the absence of noisy traits, reconstruction is nearly always correct,
-displaying 0.3\% error  on average. In the presence of random
-noise, the reconstructions are fairly accurate, except when noise
-becomes severe. Nevertheless, even in the extreme case where half 
-of the characters display completely random signal, the estimated fossil positions
-tend to fall within the correct region of the tree, exhibiting between 7.8\% (with binary weighting under the compound Dirichlet prior) and 17.6\% (unweighted, under the exponential prior)  
-placement error on average under the exponential prior when
-alignments contain an equal number of clean and dirty sites. And although the procedure
-reconstructs fossil positions that are quite distant in the worst case (18\% error under the exponential prior with no weighting scheme),
-application of the weighting procedures reduces placement error by half, even though
+displaying 0.9\% error  on average. In the presence of random
+noise, the reconstructions are fairly accurate under the binary scheme, except when noise
+becomes severe. And although the procedure
+reconstructs fossil positions that are quite distant in the worst case (50\% error under the exponential prior with no weighting scheme),
+application of the weighting procedures reduces placement error by over half, even though
 the signal-to-noise ratio is quite high.
 
 In the \emph{cophymaru} implementation, the compound Dirichlet prior
 outperforms the exponential branch length prior on the simulated datasets (Table 2).
 Placement error  lower under the compound Dirichlet in all but one of the comparisons. The improvement
 exhibited under the compound Dirichlet is greatest when using the binary weighting scheme,
-resulting in a  2\% reduction in error compared to exponential prior on the noisiest datasets.
+resulting in a  6\% reduction in error compared to exponential prior on the noisiest dataset.
  The improvement also increases with the noisiness of the simulated 
-dataset, with the 50 clean+50 dirty dataset displaying the largest increase in placement accuracy.
+dataset, with the 50 clean+50 dirty dataset displaying the largest increase in placement accuracy when using the binary weighting scheme.
 This result suggests that the compound Dirichlet branch prior combined with  binary weighting scheme
 may be the ideal mode through which to analyze particularly noisy datasets.
 
@@ -636,12 +632,12 @@ error when signal is clear. The adaptation of Berger and Stamatakis'
 (2010) site weight calibration approach also appears to effectively
 filter through noisy datasets to improve estimation. The binary weight
 calibrations appear particularly effective at dealing with rampant
-misleading random noise, with improving accuracy by 2 to 20 times
+misleading random noise, improving accuracy by 2 to 20 times
 depending on the relative proportion of signal and noise compared to
 unweighted analyses. These results show promise toward the prospect of
 applying the method developed in this work to the analysis of
 large-scale morphometric datasets, where significant noise might be
-expected. Although introducing noise to unweighted analyses decreases
+expected. Although introducing noise decreases
 reconstruction accuracy, the method performs predictably, and still
 manages to place fossils on average within the correct neighborhood.
 However, when weighting schemes are applied, the performance improves
@@ -653,10 +649,10 @@ empirical datasets.
 dataset & binary\_weights & float\_weights & unweighted\tabularnewline
 \midrule
 \endhead
-50 clean & 0.003 & 0.004  & 0.003 \tabularnewline
-50 clean + 10 dirty & 0.008  & 0.065  & 0.132 \tabularnewline
-50 clean + 25 dirty & 0.051 & 0.140  & 0.163  \tabularnewline
-50 clean + 50 dirty & 0.097  & 0.162 & 0.176 \tabularnewline
+50 clean & 0.009 & 0.012  & 0.009 \tabularnewline
+50 clean + 10 dirty & 0.024  & 0.195  & 0.396 \tabularnewline
+50 clean + 25 dirty & 0.153 & 0.420  & 0.489  \tabularnewline
+50 clean + 50 dirty & 0.291  & 0.485 & 0.528 \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -669,10 +665,10 @@ separating reconstructed placements from their true positions across all
 dataset & binary\_weights & float\_weights & unweighted\tabularnewline
 \midrule
 \endhead
-50 clean & 0.003  & 0.003 & 0.004 \tabularnewline
-50 clean + 10 dirty & 0.007 & 0.063 & 0.130 \tabularnewline
-50 clean + 25 dirty & 0.040 & 0.134 & 0.167 \tabularnewline
-50 clean + 50 dirty & 0.078 & 0.156  & 0.175 \tabularnewline
+50 clean & 0.009  & 0.009 & 0.012 \tabularnewline
+50 clean + 10 dirty & 0.021 & 0.189 & 0.390 \tabularnewline
+50 clean + 25 dirty & 0.120 & 0.402 & 0.501 \tabularnewline
+50 clean + 50 dirty & 0.234 & 0.468  & 0.522 \tabularnewline
 \bottomrule
 \end{longtable}
 
